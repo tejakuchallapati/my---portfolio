@@ -60,27 +60,33 @@ body::after {
 /* ── CURSOR ─────────────────────────────────────────────────── */
 #cursor {
   position: fixed; top: 0; left: 0;
-  width: 6px; height: 6px;
-  background: #fff; border-radius: 50%;
+  width: 8px; height: 8px;
+  background: var(--c-cyan);
+  border-radius: 2px;
   pointer-events: none; z-index: 99999;
-  transition: width 0.3s, height 0.3s, background 0.3s;
+  transition: width 0.3s, height 0.3s, background 0.3s, border-radius 0.3s;
+  box-shadow: 0 0 10px var(--c-cyan);
 }
 #cursor.active {
-  width: 12px; height: 12px;
-  background: var(--c-cyan);
+  width: 6px; height: 6px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 8px #fff;
 }
 #cursor-ring {
   position: fixed; top: 0; left: 0;
-  width: 50px; height: 50px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 50%;
+  width: 44px; height: 44px;
+  border: 1.5px solid rgba(124, 92, 252, 0.45);
+  border-radius: 6px;
   pointer-events: none; z-index: 99998;
-  transition: width 0.3s, height 0.3s, border 0.3s, transform 0.1s ease-out;
+  transition: width 0.3s, height 0.3s, border 0.3s, border-radius 0.3s, background 0.3s;
 }
 #cursor-ring.active {
-  width: 70px; height: 70px;
-  border: 1px solid var(--c-purple);
-  background: rgba(124, 92, 252, 0.1);
+  width: 60px; height: 60px;
+  border: 1.5px solid var(--c-cyan);
+  border-radius: 50%;
+  background: rgba(0, 229, 255, 0.08);
+  box-shadow: 0 0 15px rgba(0, 229, 255, 0.15);
 }
 #cursor-shadow {
   position: fixed; top: 0; left: 0;
@@ -89,6 +95,7 @@ body::after {
   filter: blur(20px); border-radius: 50%;
   pointer-events: none; z-index: 99997;
 }
+
 
 /* ── NAV ────────────────────────────────────────────────────── */
 nav {
