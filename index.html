@@ -9,7 +9,7 @@
    <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Space+Grotesk:wght@300..700&family=Syne:wght@400..800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Space+Grotesk:wght@300..700&family=Syne:wght@400..800&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
 
   <!-- Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
@@ -73,10 +73,10 @@
     <!-- Left Text Block -->
     <div style="max-width: 500px;">
       <!-- Increased size to 5.5rem and added animation -->
-      <h1 style="font-family: 'Syne', sans-serif; font-size: 5.5rem; font-weight: 800; line-height: 1.1; margin-bottom: 1rem; color: #fff; animation: textFloat 4s ease-in-out infinite;">
-        I am <span style="color: #7c5cfc; animation: textGlow 2s alternate infinite;">Teja</span>
+      <h1 style="font-family: 'Outfit', sans-serif; font-size: 6rem; font-weight: 900; line-height: 1; margin-bottom: 1.5rem; color: #fff; letter-spacing: -0.04em; animation: textFloat 4s ease-in-out infinite;">
+        I am <span style="background: linear-gradient(to right, #7c5cfc, #00e5ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-shadow: 0 0 40px rgba(124,92,252,0.3);">Teja</span>
       </h1>
-      <h2 id="role-rotator" style="font-family: 'Space Grotesk', sans-serif; font-size: 1.8rem; font-weight: 400; color: #8b92b2; margin-bottom: 1.5rem; min-height: 2.5rem;">
+      <h2 id="role-rotator" style="font-family: 'Space Grotesk', sans-serif; font-size: 1.6rem; font-weight: 300; color: #8b92b2; margin-bottom: 2rem; min-height: 2.5rem; letter-spacing: 0.1em; text-transform: uppercase;">
         <!-- Roles will be injected here -->
       </h2>
       <p style="font-family: 'Inter', sans-serif; font-size: 0.95rem; color: #6d7593; line-height: 1.6; margin-bottom: 2.5rem; max-width: 400px;">
@@ -93,13 +93,10 @@
       </div>
     </div>
 
-    <!-- Right 3D Area / Cube Container -->
-    <div style="position: relative; width: 500px; height: 500px; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+    <!-- Right 3D Area / Tech Core Container -->
+    <div class="hero-3d-container" style="position: relative; width: 700px; height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center; margin-right: -100px;">
       <!-- Three.js Canvas specifically constrained here -->
       <canvas id="three-canvas" style="width: 100%; height: 100%; pointer-events: auto;"></canvas>
-      <div style="position: absolute; bottom: 20px; font-family: 'Inter', sans-serif; font-size: 0.7rem; letter-spacing: 2px; color: #4a5568; text-transform: uppercase;">
-        Drag To Rotate
-      </div>
     </div>
   </div>
 
@@ -126,17 +123,24 @@
         <div class="avatar-glow"></div>
       </div>
       <div class="floating-badge b1">
-        <div class="fb-icon cyan">⚡</div>
+        <div class="fb-icon cyan"><i data-lucide="cpu"></i></div>
         <div>
           <div style="font-size:.75rem;color:var(--c-muted)">Projects Built</div>
           <div style="font-weight:700">50+</div>
         </div>
       </div>
       <div class="floating-badge b2">
-        <div class="fb-icon purple">🏆</div>
+        <div class="fb-icon purple"><i data-lucide="binary"></i></div>
         <div>
           <div style="font-size:.75rem;color:var(--c-muted)">Years Exp.</div>
           <div style="font-weight:700">6+</div>
+        </div>
+      </div>
+      <div class="floating-badge b3" style="top: 50%; left: -2rem; animation: float 4s 0.7s ease-in-out infinite;">
+        <div class="fb-icon cyan"><i data-lucide="code-2"></i></div>
+        <div>
+          <div style="font-size:.75rem;color:var(--c-muted)">Clean Code</div>
+          <div style="font-weight:700">100%</div>
         </div>
       </div>
     </div>

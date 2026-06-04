@@ -14,7 +14,7 @@
   --c-grad: linear-gradient(135deg, #7c5cfc, #00e5ff);
   --c-grad2: linear-gradient(135deg, #f472b6, #7c5cfc);
   /* ── FONTS ────────────────────────────────────────────────── */
-  --font-display: 'Syne', sans-serif;
+  --font-display: 'Outfit', sans-serif;
   --font-body: 'Inter', sans-serif;
   --font-special: 'Space Grotesk', sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
@@ -149,11 +149,12 @@ section { min-height: 100vh; position: relative; padding: 8rem 3rem 4rem; }
 #particles { position: absolute; inset: 0; z-index: 2; opacity: .45; }
 .hero-content {
   position: relative; z-index: 4;
-  text-align: center;
-  display: flex; flex-direction: column;
-  align-items: center; justify-content: center;
-  max-width: 900px; padding: 2rem;
-  margin-top: -5vh; /* Push slightly towards top center */
+  display: flex; align-items: center; justify-content: space-between;
+  width: 90%; max-width: 1200px; margin: 0 auto;
+}
+@media (max-width: 1100px) {
+  #hero .container > div { flex-direction: column; text-align: center; }
+  .hero-3d-container { width: 100% !important; height: 400px !important; margin: 0 !important; }
 }
 
 .hero-eyebrow {
