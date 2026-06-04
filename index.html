@@ -117,26 +117,29 @@
 
     <!-- Visual side -->
     <div class="about-visual reveal">
-      <div class="avatar-frame">
-        <!-- Replace the emoji with <img src="assets/avatar.jpg" alt="Alex Mercer"> -->
-      <img src="assets/teja.png" alt="Teja" style="width:100%;height:100%;object-fit:cover;display:block;" data-editable="image" data-id="profile-img">
+      <!-- Rotating tech HUD backgrounds -->
+      <div class="about-hud-circle"></div>
+      <div class="about-hud-circle-inner"></div>
+      
+      <div class="avatar-frame" style="position: relative; z-index: 2;">
+        <img src="assets/teja.png" alt="Teja" style="width:100%;height:100%;object-fit:cover;display:block;" data-editable="image" data-id="profile-img">
         <div class="avatar-glow"></div>
       </div>
-      <div class="floating-badge b1">
+      <div class="floating-badge b1" style="z-index: 3;">
         <div class="fb-icon cyan"><i data-lucide="cpu"></i></div>
         <div>
           <div style="font-size:.75rem;color:var(--c-muted)">Projects Built</div>
           <div style="font-weight:700">50+</div>
         </div>
       </div>
-      <div class="floating-badge b2">
+      <div class="floating-badge b2" style="z-index: 3;">
         <div class="fb-icon purple"><i data-lucide="binary"></i></div>
         <div>
           <div style="font-size:.75rem;color:var(--c-muted)">Years Exp.</div>
           <div style="font-weight:700">6+</div>
         </div>
       </div>
-      <div class="floating-badge b3" style="top: 50%; left: -2rem; animation: float 4s 0.7s ease-in-out infinite;">
+      <div class="floating-badge b3" style="top: 50%; left: -2rem; animation: float 4s 0.7s ease-in-out infinite; z-index: 3;">
         <div class="fb-icon cyan"><i data-lucide="code-2"></i></div>
         <div>
           <div style="font-size:.75rem;color:var(--c-muted)">Clean Code</div>
@@ -153,17 +156,40 @@
       </div>
 
       <div class="about-bio reveal reveal-d2">
-        <p>Hey! I'm Teja — a <strong>Full Stack Engineer</strong> with a passion for turning complex problems into elegant, performant solutions. I specialize in building applications that don't just work — they <strong>inspire</strong>.</p>
-        <br>
-        <p>My expertise spans <strong>React, Node.js, TypeScript, and cloud architectures</strong>. I'm obsessed with the details: smooth animations, pixel-perfect interfaces, and code that's as clean as the design it powers.</p>
-        <br>
-        <p>When I'm not shipping products, I'm exploring <strong>WebGL, generative art</strong>, and the ever-evolving AI landscape.</p>
+        <p class="about-lead">Hey! I'm Teja — a <strong>Full Stack Engineer</strong> with a passion for turning complex problems into elegant, immersive digital experiences. I build applications that don't just work — they <strong>inspire</strong>.</p>
+        
+        <div class="tech-hud-grid">
+          <div class="hud-item">
+            <span class="hud-label">Core Stack</span>
+            <span class="hud-value">React, Next.js, Node.js, TypeScript</span>
+          </div>
+          <div class="hud-item">
+            <span class="hud-label">Specialities</span>
+            <span class="hud-value">3D WebGL (Three.js), Real-time Apps, Cloud Scaling</span>
+          </div>
+          <div class="hud-item">
+            <span class="hud-label">Philosophy</span>
+            <span class="hud-value">Pixel-perfection, smooth motion, robust clean code</span>
+          </div>
+        </div>
       </div>
 
       <div class="about-stats reveal reveal-d3">
-        <div class="stat-card"><span class="stat-num">6+</span><span class="stat-label">Years Experience</span></div>
-        <div class="stat-card"><span class="stat-num">50+</span><span class="stat-label">Projects Shipped</span></div>
-        <div class="stat-card"><span class="stat-num">12+</span><span class="stat-label">Happy Clients</span></div>
+        <div class="stat-card">
+          <div class="stat-icon-wrapper purple"><i data-lucide="award"></i></div>
+          <span class="stat-num">6+</span>
+          <span class="stat-label">Years Experience</span>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon-wrapper cyan"><i data-lucide="folder-git2"></i></div>
+          <span class="stat-num">50+</span>
+          <span class="stat-label">Projects Shipped</span>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon-wrapper pink"><i data-lucide="smile"></i></div>
+          <span class="stat-num">12+</span>
+          <span class="stat-label">Happy Clients</span>
+        </div>
       </div>
 
       <div class="reveal reveal-d4" style="display:flex;gap:1rem;flex-wrap:wrap">
