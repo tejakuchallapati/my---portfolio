@@ -45,7 +45,7 @@ filterBtns.forEach(btn => {
 });
 
 // ── 3-D card tilt on hover ───────────────────────────────────
-document.querySelectorAll('.project-card, .cert-card').forEach(card => {
+document.querySelectorAll('.project-card, .cert-card, .avatar-frame').forEach(card => {
   card.addEventListener('mousemove', e => {
     const rect = card.getBoundingClientRect();
     const x = (e.clientX - rect.left) / rect.width  - 0.5;

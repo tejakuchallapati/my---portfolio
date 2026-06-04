@@ -809,7 +809,9 @@ footer {
   .projects-grid, .certs-grid { grid-template-columns: 1fr; }
   .resume-layout { grid-template-columns: 1fr; }
   .form-row      { grid-template-columns: 1fr; }
-  .about-stats   { grid-template-columns: repeat(3,1fr); }
+  .about-stats   { grid-template-columns: 1fr; gap: 1rem; }
+  .hud-item      { grid-template-columns: 1fr; gap: 0.25rem; }
+  .about-hud-circle, .about-hud-circle-inner { display: none; }
   .floating-badge { display: none; }
 }
 
