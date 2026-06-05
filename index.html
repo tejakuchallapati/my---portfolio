@@ -3,29 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Teja · Full Stack Engineer</title>
-  <meta name="description" content="Premium developer portfolio — Teja, Full Stack Engineer specialising in immersive web experiences.">
+  <title>K. Teja · Full Stack Developer</title>
+  <meta name="description" content="Portfolio of K. Teja — Full Stack Developer building modern web applications with React, Node.js, and JavaScript.">
 
-   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Space+Grotesk:wght@300..700&family=Syne:wght@400..800&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
 
-  <!-- Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
-
-  <!-- Stylesheet -->
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<!-- ── CUSTOM CURSOR ─────────────────────────────────────── -->
-<div id="cursor"></div>
-<div id="cursor-shadow"></div>
-<div id="cursor-ring"></div>
-
-<!-- ── NAV ──────────────────────────────────────────────── -->
-<nav id="navbar" class="hero-nav">
+<nav id="navbar" class="site-nav">
   <a href="#hero" class="nav-logo">Teja<span>.</span></a>
   <button class="menu-btn" id="menuBtn" aria-label="Open menu">
     <span></span><span></span><span></span>
@@ -39,674 +29,176 @@
   </ul>
 </nav>
 
-<!-- ═══════════════════════════════════════════════════════
-     HOME
-════════════════════════════════════════════════════════ -->
+<!-- HOME -->
 <section id="hero">
-  <div class="hero-texture" aria-hidden="true"></div>
-  <div class="hero-spotlight" aria-hidden="true"></div>
-
-  <div class="hero-content hero-home">
-    <div class="hero-home-visual">
+  <div class="container hero-home">
+    <div class="hero-home-visual reveal">
       <div class="hero-photo-frame">
-        <span class="hero-corner hero-corner-tl" aria-hidden="true"></span>
-        <span class="hero-corner hero-corner-tr" aria-hidden="true"></span>
-        <span class="hero-corner hero-corner-bl" aria-hidden="true"></span>
-        <span class="hero-corner hero-corner-br" aria-hidden="true"></span>
         <img src="assets/teja.png" alt="K. Teja — Full Stack Developer">
       </div>
     </div>
 
     <div class="hero-home-text">
-      <div class="hero-status">
-        <span class="hero-status-dot"></span>
-        Open to opportunities
-      </div>
+      <p class="hero-greeting reveal reveal-d1">Hello, I'm</p>
+      <h1 class="hero-display-name reveal reveal-d2">K. <span>Teja</span></h1>
+      <p class="hero-title reveal reveal-d3">Full Stack Developer</p>
+      <div class="hero-role-line reveal reveal-d3"></div>
 
-      <p class="hero-greeting">Hello, I'm</p>
-      <h1 class="hero-display-name">K. <span>Teja</span></h1>
-      <p class="hero-title">Full Stack Developer</p>
-      <div class="hero-role-line" aria-hidden="true"></div>
-
-      <p class="hero-bio">
-        I'm a passionate and dedicated <strong>Full Stack Web Developer</strong> with a strong foundation in frontend and backend technologies. With hands-on experience in modern frameworks, REST APIs, and database-driven applications, I enjoy turning ideas into seamless, user-friendly digital experiences — from learning platforms to full-stack products shipped on GitHub.
+      <p class="hero-bio reveal reveal-d4">
+        I'm a passionate and dedicated Full Stack Web Developer with a strong foundation in both frontend and backend technologies. With hands-on experience in modern frameworks, REST APIs, and database-driven applications, I love turning ideas into seamless, user-friendly digital experiences. I'm always eager to learn, explore new tools, and deliver impactful solutions through technology.
       </p>
 
-      <p class="hero-bio hero-bio-secondary">
-        I care about clean architecture, readable code, and interfaces that feel polished under real-world use. Always eager to learn, collaborate, and deliver solutions that teams can trust and scale.
-      </p>
-
-      <div class="hero-metrics">
-        <div class="hero-metric">
-          <span class="hero-metric-value">3+</span>
-          <span class="hero-metric-label">Live Projects</span>
-        </div>
-        <div class="hero-metric-divider" aria-hidden="true"></div>
-        <div class="hero-metric">
-          <span class="hero-metric-value">Full Stack</span>
-          <span class="hero-metric-label">End-to-end builds</span>
-        </div>
-        <div class="hero-metric-divider" aria-hidden="true"></div>
-        <div class="hero-metric">
-          <span class="hero-metric-value">Clean Code</span>
-          <span class="hero-metric-label">Maintainable &amp; clear</span>
-        </div>
-      </div>
-
-      <div class="hero-tech-pills">
-        <span>React</span>
-        <span>Node.js</span>
-        <span>JavaScript</span>
-        <span>MongoDB</span>
-        <span>REST APIs</span>
-      </div>
-
-      <div class="hero-actions">
-        <a href="assets/teja-resume.pdf" download class="hero-resume-btn">
-          <i data-lucide="download"></i>
-          Download Resume
-        </a>
+      <div class="hero-actions reveal reveal-d5">
+        <a href="assets/teja-resume.pdf" download class="hero-resume-btn">Download Resume</a>
         <a href="https://www.linkedin.com/in/tejakuchallapati/" target="_blank" rel="noopener" class="hero-icon-btn" aria-label="LinkedIn">
           <i data-lucide="linkedin"></i>
         </a>
         <a href="https://github.com/tejakuchallapati" target="_blank" rel="noopener" class="hero-icon-btn" aria-label="GitHub">
           <i data-lucide="github"></i>
         </a>
-        <a href="#projects" class="hero-projects-link">View my work →</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════════════════════
-     ABOUT
-════════════════════════════════════════════════════════ -->
-<section id="about">
-  <div class="grid-bg"></div>
+<!-- SKILLS -->
+<section id="skills" class="simple-section">
   <div class="container">
+    <h2 class="section-heading reveal">Skills</h2>
 
-    <!-- Visual side -->
-    <div class="about-visual reveal">
-      <!-- Rotating tech HUD backgrounds -->
-      <div class="about-hud-circle"></div>
-      <div class="about-hud-circle-inner"></div>
-      
-      <div class="avatar-frame" style="position: relative; z-index: 2;">
-        <img src="assets/teja.png" alt="K. Teja — Full Stack Engineer" style="width:100%;height:100%;object-fit:cover;object-position:top center;display:block;" data-editable="image" data-id="profile-img">
-        <div class="avatar-glow"></div>
-      </div>
-      <div class="floating-badge b1" style="z-index: 3;">
-        <div class="fb-icon cyan"><i data-lucide="cpu"></i></div>
-        <div>
-          <div style="font-size:.75rem;color:var(--c-muted)">Projects Built</div>
-          <div style="font-weight:700">50+</div>
-        </div>
-      </div>
-      <div class="floating-badge b2" style="z-index: 3;">
-        <div class="fb-icon purple"><i data-lucide="binary"></i></div>
-        <div>
-          <div style="font-size:.75rem;color:var(--c-muted)">Years Exp.</div>
-          <div style="font-weight:700">6+</div>
-        </div>
-      </div>
-      <div class="floating-badge b3" style="top: 50%; left: -2rem; animation: float 4s 0.7s ease-in-out infinite; z-index: 3;">
-        <div class="fb-icon cyan"><i data-lucide="code-2"></i></div>
-        <div>
-          <div style="font-size:.75rem;color:var(--c-muted)">Clean Code</div>
-          <div style="font-weight:700">100%</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Text side -->
-    <div class="about-text">
-      <div class="reveal reveal-d1">
-        <div class="section-tag">About Me</div>
-        <h2 class="section-title">Crafting the <span>future</span> of the web</h2>
+    <div class="skills-grid">
+      <div class="skill-group reveal reveal-d1">
+        <h3>Programming Languages</h3>
+        <ul>
+          <li>JavaScript</li>
+          <li>HTML</li>
+          <li>CSS</li>
+        </ul>
       </div>
 
-      <div class="about-bio reveal reveal-d2">
-        <p class="about-lead">Hey! I'm Teja — a <strong>Full Stack Engineer</strong> with a passion for turning complex problems into elegant, immersive digital experiences. I build applications that don't just work — they <strong>inspire</strong>.</p>
-        
-        <div class="tech-hud-grid">
-          <div class="hud-item">
-            <span class="hud-label">Core Stack</span>
-            <span class="hud-value">React, Next.js, Node.js, TypeScript</span>
-          </div>
-          <div class="hud-item">
-            <span class="hud-label">Specialities</span>
-            <span class="hud-value">3D WebGL (Three.js), Real-time Apps, Cloud Scaling</span>
-          </div>
-          <div class="hud-item">
-            <span class="hud-label">Philosophy</span>
-            <span class="hud-value">Pixel-perfection, smooth motion, robust clean code</span>
-          </div>
-        </div>
+      <div class="skill-group reveal reveal-d2">
+        <h3>Databases</h3>
+        <ul>
+          <li>MongoDB</li>
+        </ul>
       </div>
 
-      <div class="about-stats reveal reveal-d3">
-        <div class="stat-card">
-          <div class="stat-icon-wrapper purple"><i data-lucide="award"></i></div>
-          <span class="stat-num">6+</span>
-          <span class="stat-label">Years Experience</span>
-        </div>
-        <div class="stat-card">
-          <div class="stat-icon-wrapper cyan"><i data-lucide="folder-git2"></i></div>
-          <span class="stat-num">50+</span>
-          <span class="stat-label">Projects Shipped</span>
-        </div>
-        <div class="stat-card">
-          <div class="stat-icon-wrapper pink"><i data-lucide="smile"></i></div>
-          <span class="stat-num">12+</span>
-          <span class="stat-label">Happy Clients</span>
-        </div>
+      <div class="skill-group reveal reveal-d3">
+        <h3>Full Stack Technologies</h3>
+        <ul>
+          <li>React</li>
+          <li>Node.js</li>
+          <li>Express</li>
+          <li>REST APIs</li>
+        </ul>
       </div>
 
-      <div class="reveal reveal-d4" style="display:flex;gap:1rem;flex-wrap:wrap">
-        <a href="#contact" class="btn-primary"  style="font-size:.85rem;padding:.75rem 1.5rem">Let's Work Together</a>
-        <a href="#resume"  class="btn-outline"  style="font-size:.85rem;padding:.75rem 1.5rem">View Resume</a>
+      <div class="skill-group reveal reveal-d4">
+        <h3>Tools &amp; Platforms</h3>
+        <ul>
+          <li>Git &amp; GitHub</li>
+          <li>Vite</li>
+          <li>VS Code</li>
+        </ul>
       </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- ═══════════════════════════════════════════════════════
-     SKILLS
-════════════════════════════════════════════════════════ -->
-<section id="skills">
-  <div class="grid-bg" style="opacity:.5"></div>
-  <div class="container">
-
-    <div class="reveal">
-      <div class="section-tag">Technical Skills</div>
-      <h2 class="section-title char-anim">My <span>expertise</span></h2>
-      <p class="section-subtitle">A curated view of the technologies I use to build remarkable products.</p>
-    </div>
-
-    <div style="display:contents">
-      <!-- Skill bars (left column) -->
-      <div class="skills-left">
-        <div class="skill-item reveal reveal-d1">
-          <div class="skill-header"><span class="skill-name">React / Next.js</span><span class="skill-pct">95%</span></div>
-          <div class="skill-bar"><div class="skill-fill" style="width:95%"></div></div>
-        </div>
-        <div class="skill-item reveal reveal-d2">
-          <div class="skill-header"><span class="skill-name">TypeScript</span><span class="skill-pct">92%</span></div>
-          <div class="skill-bar"><div class="skill-fill" style="width:92%"></div></div>
-        </div>
-        <div class="skill-item reveal reveal-d2">
-          <div class="skill-header"><span class="skill-name">Node.js / Express</span><span class="skill-pct">88%</span></div>
-          <div class="skill-bar"><div class="skill-fill" style="width:88%"></div></div>
-        </div>
-        <div class="skill-item reveal reveal-d3">
-          <div class="skill-header"><span class="skill-name">Python / FastAPI</span><span class="skill-pct">82%</span></div>
-          <div class="skill-bar"><div class="skill-fill" style="width:82%"></div></div>
-        </div>
-        <div class="skill-item reveal reveal-d3">
-          <div class="skill-header"><span class="skill-name">Three.js / WebGL</span><span class="skill-pct">78%</span></div>
-          <div class="skill-bar"><div class="skill-fill" style="width:78%"></div></div>
-        </div>
-        <div class="skill-item reveal reveal-d4">
-          <div class="skill-header"><span class="skill-name">AWS / Cloud Architecture</span><span class="skill-pct">80%</span></div>
-          <div class="skill-bar"><div class="skill-fill" style="width:80%"></div></div>
-        </div>
-      </div>
-
-      <!-- Skill pills (right column) with Bucket Spawner -->
-      <div class="skills-right" style="position: relative;">
-        <!-- Spawner removed, standard grid layout will be used -->
-        
-        <div id="spawnerContainer" class="pill-spawner-grid">
-          <div class="skill-pill-group reveal reveal-d1">
-            <h4>Frontend</h4>
-          <span class="pill pill-blue"><i data-lucide="layout"></i> React</span>
-          <span class="pill pill-gray"><i data-lucide="zap"></i> Next.js</span>
-          <span class="pill pill-blue"><i data-lucide="code-2"></i> TypeScript</span>
-          <span class="pill pill-teal"><i data-lucide="palette"></i> Tailwind CSS</span>
-          <span class="pill pill-pink"><i data-lucide="motion-cpw"></i> Framer Motion</span>
-          <span class="pill pill-green"><i data-lucide="box"></i> Three.js</span>
-          <span class="pill pill-amber"><i data-lucide="sparkles"></i> GSAP</span>
-        </div>
-        <div class="skill-pill-group reveal reveal-d2">
-          <h4>Backend</h4>
-          <span class="pill pill-green"><i data-lucide="server"></i> Node.js</span>
-          <span class="pill pill-blue"><i data-lucide="terminal"></i> Python</span>
-          <span class="pill pill-pink"><i data-lucide="network"></i> GraphQL</span>
-          <span class="pill pill-gray"><i data-lucide="link"></i> REST APIs</span>
-          <span class="pill pill-blue"><i data-lucide="database"></i> PostgreSQL</span>
-          <span class="pill pill-green"><i data-lucide="database"></i> MongoDB</span>
-          <span class="pill pill-red"><i data-lucide="cpu"></i> Redis</span>
-        </div>
-        <div class="skill-pill-group reveal reveal-d3">
-          <h4>DevOps &amp; Cloud</h4>
-          <span class="pill pill-amber"><i data-lucide="cloud"></i> AWS</span>
-          <span class="pill pill-blue"><i data-lucide="box"></i> Docker</span>
-          <span class="pill pill-blue"><i data-lucide="ship"></i> Kubernetes</span>
-          <span class="pill pill-purple"><i data-lucide="git-branch"></i> CI/CD</span>
-          <span class="pill pill-purple"><i data-lucide="binary"></i> Terraform</span>
-          <span class="pill pill-gray"><i data-lucide="globe"></i> Vercel</span>
-        </div>
-        <div class="skill-pill-group reveal reveal-d4">
-          <h4>Tools &amp; Other</h4>
-          <span class="pill pill-red"><i data-lucide="github"></i> Git</span>
-          <span class="pill pill-teal"><i data-lucide="figma"></i> Figma</span>
-          <span class="pill pill-amber"><i data-lucide="test-tube"></i> Jest</span>
-          <span class="pill pill-gray"><i data-lucide="eye"></i> Playwright</span>
-          <span class="pill pill-purple"><i data-lucide="brain-circuit"></i> AI/ML APIs</span>
-          <span class="pill pill-blue"><i data-lucide="message-square"></i> WebSockets</span>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- ═══════════════════════════════════════════════════════
-     PROJECTS
-════════════════════════════════════════════════════════ -->
-<section id="projects">
-  <div class="container">
-
-    <div class="projects-header">
-      <div class="reveal">
-        <div class="section-tag">Selected Work</div>
-        <h2 class="section-title char-anim">Featured <span>projects</span></h2>
-      </div>
-      <div class="filter-tabs reveal reveal-d2">
-        <button class="filter-btn active" data-filter="all">All</button>
-        <button class="filter-btn" data-filter="fullstack">Full Stack</button>
-        <button class="filter-btn" data-filter="frontend">Frontend</button>
-        <button class="filter-btn" data-filter="ai">AI/ML</button>
-        <button class="filter-btn" data-filter="backend">Backend</button>
-      </div>
-    </div>
-
-    <div class="projects-grid" id="projectsGrid">
-
-      <!-- Card 1 -->
-      <div class="project-card reveal" data-cat="fullstack">
-        <div class="project-thumb" data-editable="image" data-id="project-1-img">
-          <div class="project-thumb-bg p-t1"></div>
-          <div class="project-glow"></div>
-          <span class="project-emoji">📊</span>
-        </div>
-        <div class="project-body">
-          <div class="project-tags">
-            <span class="project-tag">React</span>
-            <span class="project-tag cyan">Chart.js</span>
-            <span class="project-tag">Express</span>
-          </div>
-          <h3 class="project-name" data-editable="text" data-id="project-1-title">Learning Tracker</h3>
-          <p class="project-desc">A full-stack dashboard for tracking educational goals, featuring interactive charts, streak systems, and real-time data persistence.</p>
-          <div class="project-links">
-            <a href="#" class="project-link">
-              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>Live
-            </a>
-            <a href="#" class="project-link">
-              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>GitHub
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 2 -->
-      <div class="project-card reveal reveal-d1" data-cat="ai">
-        <div class="project-thumb">
-          <div class="project-thumb-bg p-t2"></div>
-          <div class="project-glow"></div>
-          <span class="project-emoji">💠</span>
-        </div>
-        <div class="project-body">
-          <div class="project-tags">
-            <span class="project-tag">Three.js</span>
-            <span class="project-tag cyan">WebGL</span>
-            <span class="project-tag">GSAP</span>
-          </div>
-          <h3 class="project-name">NeuroMorph 3D</h3>
-          <p class="project-desc">A cinematic 3D portfolio experience featuring heroic character morphing, neural networks, and fluid scroll-linked animations.</p>
-          <div class="project-links">
-            <a href="#" class="project-link"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>Live</a>
-            <a href="#" class="project-link"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>GitHub</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 3 -->
-      <div class="project-card reveal reveal-d2" data-cat="frontend">
-        <div class="project-thumb">
-          <div class="project-thumb-bg p-t3"></div>
-          <div class="project-glow"></div>
-          <span class="project-emoji">🎨</span>
-        </div>
-        <div class="project-body">
-          <div class="project-tags">
-            <span class="project-tag">Three.js</span>
-            <span class="project-tag cyan">WebGL</span>
-            <span class="project-tag">GSAP</span>
-          </div>
-          <h3 class="project-name">VisualForge Studio</h3>
-          <p class="project-desc">Browser-based 3D design tool with real-time collaboration, shader editing, and one-click export to multiple formats.</p>
-          <div class="project-links">
-            <a href="#" class="project-link"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>Live</a>
-            <a href="#" class="project-link"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>GitHub</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 4 -->
-      <div class="project-card reveal" data-cat="backend">
-        <div class="project-thumb">
-          <div class="project-thumb-bg p-t4"></div>
-          <div class="project-glow"></div>
-          <span class="project-emoji">⚡</span>
-        </div>
-        <div class="project-body">
-          <div class="project-tags">
-            <span class="project-tag">Node.js</span>
-            <span class="project-tag cyan">Redis</span>
-            <span class="project-tag">Kafka</span>
-          </div>
-          <h3 class="project-name">StreamPulse API</h3>
-          <p class="project-desc">High-throughput event streaming infrastructure processing 2M+ events/sec with intelligent rate limiting and fan-out.</p>
-          <div class="project-links">
-            <a href="#" class="project-link"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>Docs</a>
-            <a href="#" class="project-link"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>GitHub</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 5 -->
-      <div class="project-card reveal reveal-d1" data-cat="fullstack">
-        <div class="project-thumb">
-          <div class="project-thumb-bg p-t5"></div>
-          <div class="project-glow"></div>
-          <span class="project-emoji">📊</span>
-        </div>
-        <div class="project-body">
-          <div class="project-tags">
-            <span class="project-tag">React</span>
-            <span class="project-tag cyan">D3.js</span>
-            <span class="project-tag">GraphQL</span>
-          </div>
-          <h3 class="project-name">Orbit Analytics</h3>
-          <p class="project-desc">Real-time business intelligence dashboard with 40+ chart types, custom KPI builders, and AI-generated insights.</p>
-          <div class="project-links">
-            <a href="#" class="project-link"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>Live</a>
-            <a href="#" class="project-link"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>GitHub</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 6 -->
-      <div class="project-card reveal reveal-d2" data-cat="ai">
-        <div class="project-thumb">
-          <div class="project-thumb-bg p-t6"></div>
-          <div class="project-glow"></div>
-          <span class="project-emoji">🧠</span>
-        </div>
-        <div class="project-body">
-          <div class="project-tags">
-            <span class="project-tag">Python</span>
-            <span class="project-tag cyan">TensorFlow</span>
-            <span class="project-tag">React</span>
-          </div>
-          <h3 class="project-name">NeuralDraft</h3>
-          <p class="project-desc">AI writing assistant that learns your style over time — context-aware suggestions, tone adaptation, and multi-language support.</p>
-          <div class="project-links">
-            <a href="#" class="project-link"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>Live</a>
-            <a href="#" class="project-link"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>GitHub</a>
-          </div>
-        </div>
-      </div>
-
     </div>
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════════════════════
-     RESUME
-════════════════════════════════════════════════════════ -->
-<section id="resume">
-  <div class="grid-bg"></div>
+<!-- PROJECTS -->
+<section id="projects" class="simple-section">
   <div class="container">
+    <h2 class="section-heading reveal">My Projects</h2>
 
-    <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:1rem">
-      <div class="reveal">
-        <div class="section-tag">Career History</div>
-        <h2 class="section-title">My <span>resume</span></h2>
-      </div>
-      <!-- Replace href with path to your actual PDF -->
-      <a href="assets/teja-resume.pdf" download class="dl-resume-btn reveal reveal-d2">
-        <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-          <path d="M12 10v6m0 0l-3-3m3 3l3-3M3 17V7a2 2 0 012-2h6l2 2h6a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2z"/>
-        </svg>
-        Download PDF
-      </a>
-    </div>
-
-    <div class="resume-layout">
-
-      <!-- Sidebar -->
-      <div class="resume-sidebar">
-
-        <div class="resume-sidebar-card reveal reveal-d1">
-          <div class="rsc-title">Contact</div>
-          <div class="contact-item"><div class="contact-icon">📧</div>teja@developer.dev</div>
-          <div class="contact-item"><div class="contact-icon">📍</div>San Francisco, CA</div>
-          <div class="contact-item"><div class="contact-icon">🌐</div>teja.dev</div>
-          <div class="contact-item"><div class="contact-icon">💼</div><a href="https://www.linkedin.com/in/tejakuchallapati/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none">linkedin.com/in/tejakuchallapati</a></div>
+    <div class="simple-projects">
+      <article class="simple-project reveal reveal-d1">
+        <h3>Learning Tracker</h3>
+        <p>A full-stack learning progress and productivity tracker for developers. Features goal tracking, progress dashboards, and data persistence across sessions.</p>
+        <div class="simple-project-links">
+          <a href="https://github.com/tejakuchallapati/Learning-Tracker" target="_blank" rel="noopener">GitHub Code</a>
         </div>
+      </article>
 
-        <div class="resume-sidebar-card reveal reveal-d2">
-          <div class="rsc-title">Education</div>
-          <div class="edu-item">
-            <div class="edu-degree">B.Sc. Computer Science</div>
-            <div class="edu-school">UC Berkeley</div>
-            <div class="edu-year">2014 – 2018</div>
-          </div>
-          <div class="edu-item">
-            <div class="edu-degree">M.Sc. Software Engineering</div>
-            <div class="edu-school">Stanford University</div>
-            <div class="edu-year">2018 – 2020</div>
-          </div>
+      <article class="simple-project reveal reveal-d2">
+        <h3>Food App</h3>
+        <p>A web-based food ordering application built with HTML, CSS, and JavaScript. Focused on clean UI, responsive layout, and interactive user flows.</p>
+        <div class="simple-project-links">
+          <a href="https://github.com/tejakuchallapati/food-app" target="_blank" rel="noopener">GitHub Code</a>
         </div>
+      </article>
 
-      </div>
-
-      <!-- Main timeline -->
-      <div class="resume-main">
-        <div class="timeline-section reveal reveal-d1">
-          <h3>Work Experience</h3>
-
-          <div class="timeline-item">
-            <div class="tl-role">Senior Full Stack Engineer</div>
-            <div class="tl-company">Vercel · Full-time</div>
-            <div class="tl-period">Jan 2023 – Present</div>
-            <div class="tl-desc">Led architecture of Next.js Edge Runtime, reducing cold starts by 60%. Mentored 8 engineers and established frontend performance standards adopted across 12 teams.</div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="tl-role">Software Engineer II</div>
-            <div class="tl-company">Stripe · Full-time</div>
-            <div class="tl-period">Mar 2021 – Dec 2022</div>
-            <div class="tl-desc">Built core components of the Stripe Dashboard React redesign. Implemented real-time fraud detection UI handling 500k+ daily transactions. Reduced time-to-interactive by 40%.</div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="tl-role">Frontend Engineer</div>
-            <div class="tl-company">Figma · Full-time</div>
-            <div class="tl-period">Jul 2020 – Feb 2021</div>
-            <div class="tl-desc">Contributed to multiplayer canvas engine, optimising WebSocket event batching for 10k+ concurrent users. Shipped the plugin API documentation experience.</div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="tl-role">Junior Developer</div>
-            <div class="tl-company">Dropbox · Internship → FTE</div>
-            <div class="tl-period">May 2018 – Jun 2020</div>
-            <div class="tl-desc">Started as intern, converted full-time. Built the file preview rendering pipeline and contributed to the React Native mobile app redesign.</div>
-          </div>
-
+      <article class="simple-project reveal reveal-d3">
+        <h3>Developer Portfolio</h3>
+        <p>A personal portfolio website showcasing my projects, skills, and contact information — built with a clean layout and smooth scroll animations.</p>
+        <div class="simple-project-links">
+          <a href="https://github.com/tejakuchallapati/my---portfolio" target="_blank" rel="noopener">GitHub Code</a>
         </div>
-      </div>
-
+      </article>
     </div>
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════════════════════
-     CERTIFICATIONS
-════════════════════════════════════════════════════════ -->
-<section id="certifications">
+<!-- CERTIFICATIONS -->
+<section id="certifications" class="simple-section">
   <div class="container">
+    <h2 class="section-heading reveal">My Certifications</h2>
 
-    <div class="reveal">
-      <div class="section-tag">Credentials</div>
-      <h2 class="section-title">Certifi<span>cations</span></h2>
-      <p class="section-subtitle">Industry-recognised credentials validating deep technical expertise.</p>
-    </div>
-
-    <div class="certs-grid">
-      <div class="cert-card reveal reveal-d1">
-        <div class="cert-issuer-logo">☁️</div>
-        <div class="cert-name">AWS Solutions Architect</div>
-        <div class="cert-issuer">Amazon Web Services</div>
-        <div class="cert-date">Issued Mar 2024 · Expires Mar 2027</div>
-        <span class="cert-badge gold">⭐ Professional</span>
+    <div class="simple-certs">
+      <div class="simple-cert reveal reveal-d1">
+        <h3>Full Stack Web Development</h3>
+        <p>Self-paced &amp; project-based learning</p>
       </div>
-      <div class="cert-card reveal reveal-d2">
-        <div class="cert-issuer-logo">🔷</div>
-        <div class="cert-name">Google Cloud Professional</div>
-        <div class="cert-issuer">Google Cloud</div>
-        <div class="cert-date">Issued Jan 2024 · Expires Jan 2026</div>
-        <span class="cert-badge">✓ Verified</span>
+      <div class="simple-cert reveal reveal-d2">
+        <h3>JavaScript &amp; React</h3>
+        <p>Modern frontend development</p>
       </div>
-      <div class="cert-card reveal reveal-d3">
-        <div class="cert-issuer-logo">⚛️</div>
-        <div class="cert-name">Meta React Advanced</div>
-        <div class="cert-issuer">Meta / Coursera</div>
-        <div class="cert-date">Issued Sep 2023 · No Expiry</div>
-        <span class="cert-badge purple">🎓 Specialist</span>
-      </div>
-      <div class="cert-card reveal">
-        <div class="cert-issuer-logo">🐳</div>
-        <div class="cert-name">Certified Kubernetes Admin</div>
-        <div class="cert-issuer">Cloud Native Foundation</div>
-        <div class="cert-date">Issued Nov 2023 · Expires Nov 2025</div>
-        <span class="cert-badge">✓ Verified</span>
-      </div>
-      <div class="cert-card reveal reveal-d1">
-        <div class="cert-issuer-logo">🤖</div>
-        <div class="cert-name">TensorFlow Developer</div>
-        <div class="cert-issuer">Google / TensorFlow</div>
-        <div class="cert-date">Issued Jun 2023 · Expires Jun 2026</div>
-        <span class="cert-badge gold">⭐ Professional</span>
-      </div>
-      <div class="cert-card reveal reveal-d2">
-        <div class="cert-issuer-logo">🔐</div>
-        <div class="cert-name">Certified Security Pro</div>
-        <div class="cert-issuer">CompTIA</div>
-        <div class="cert-date">Issued Apr 2022 · No Expiry</div>
-        <span class="cert-badge purple">🎓 Specialist</span>
+      <div class="simple-cert reveal reveal-d3">
+        <h3>Node.js &amp; Backend APIs</h3>
+        <p>Server-side application development</p>
       </div>
     </div>
-
+    <p class="cert-note reveal reveal-d4">Update this section with your actual certification names when ready.</p>
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════════════════════
-     CONTACT
-════════════════════════════════════════════════════════ -->
-<section id="contact">
-  <div class="grid-bg"></div>
-  <div class="container">
+<!-- CONTACT -->
+<section id="contact" class="simple-section">
+  <div class="container contact-wrap">
+    <h2 class="section-heading reveal">Get in Touch</h2>
 
-    <!-- Left: info + socials -->
-    <div class="contact-info">
-      <div class="reveal">
-        <div class="section-tag">Get In Touch</div>
-        <h2 class="section-title">Let's build something <span>great</span></h2>
-      </div>
-      <p class="contact-cta-text reveal reveal-d1">
-        Whether you have a project in mind, a role to fill, or just want to say hello — my inbox is always open. I typically respond within 24 hours.
-      </p>
-      <div class="social-links reveal reveal-d2">
-        <a href="https://github.com/tejakuchallapati" target="_blank" rel="noopener" class="social-link">
-          <div class="social-link-icon">🐙</div>GitHub · @tejakuchallapati
-        </a>
-        <a href="https://www.linkedin.com/in/tejakuchallapati/" target="_blank" rel="noopener" class="social-link">
-          <div class="social-link-icon">💼</div>LinkedIn · Teja Kuchallapati
-        </a>
-        <a href="https://twitter.com/teja_dev" target="_blank" rel="noopener" class="social-link">
-          <div class="social-link-icon">🐦</div>Twitter/X · @teja_dev
-        </a>
-        <a href="mailto:teja@developer.dev" class="social-link">
-          <div class="social-link-icon">📧</div>teja@developer.dev
-        </a>
-      </div>
-    </div>
-
-    <!-- Right: form -->
-    <div class="contact-form reveal reveal-d2" id="contactForm">
-      <div class="form-row">
-        <div class="form-group">
-          <label for="fname">First Name</label>
-          <input type="text" id="fname" placeholder="Jane">
-          <span class="form-error" id="fnameError">Please enter your name</span>
-        </div>
-        <div class="form-group">
-          <label for="lname">Last Name</label>
-          <input type="text" id="lname" placeholder="Doe">
-        </div>
+    <form class="simple-form reveal reveal-d2" id="contactForm" onsubmit="handleFormSubmit(event)">
+      <div class="form-group">
+        <label for="fname">Name</label>
+        <input type="text" id="fname" placeholder="Your name">
+        <span class="form-error" id="fnameError">Please enter your name</span>
       </div>
       <div class="form-group">
-        <label for="email">Email Address</label>
-        <input type="email" id="email" placeholder="jane@company.com">
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="you@email.com">
         <span class="form-error" id="emailError">Please enter a valid email</span>
       </div>
       <div class="form-group">
-        <label for="subject">Subject</label>
-        <input type="text" id="subject" placeholder="Project inquiry, Collaboration…">
-      </div>
-      <div class="form-group">
         <label for="message">Message</label>
-        <textarea id="message" placeholder="Tell me about your project…"></textarea>
+        <textarea id="message" placeholder="Your message…" rows="5"></textarea>
         <span class="form-error" id="messageError">Please enter a message</span>
       </div>
-      <button class="form-submit" id="submitBtn" onclick="handleFormSubmit(event)">
-        <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-          <path d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/>
-        </svg>
-        Send Message
-      </button>
+      <button type="submit" class="form-submit" id="submitBtn">Send Message</button>
       <div class="form-success" id="formSuccess">
-        <div style="font-size:2.5rem;margin-bottom:1rem">✅</div>
         <h3>Message Sent!</h3>
-        <p>Thanks for reaching out. I'll get back to you within 24 hours.</p>
+        <p>Thanks for reaching out. I'll get back to you soon.</p>
       </div>
-    </div>
-
+    </form>
   </div>
 </section>
 
-<!-- ── FOOTER ─────────────────────────────────────────────── -->
 <footer>
-  <div class="footer-credit">© 2025 <span>Teja</span>. Crafted with passion &amp; Three.js.</div>
-  <div class="footer-credit">Built for humans. Powered by curiosity.</div>
+  <p>© 2026 <span>Teja</span>. All rights reserved.</p>
 </footer>
 
-
-
-<!-- ── SCRIPTS (load order matters) ──────────────────────── -->
-<script src="js/cursor.js"></script>
 <script src="js/nav.js"></script>
 <script src="js/animations.js"></script>
 <script src="js/form.js"></script>
-
-<script>
-  // Initialise Lucide icons
-  lucide.createIcons();
-</script>
+<script>lucide.createIcons();</script>
 
 </body>
 </html>
