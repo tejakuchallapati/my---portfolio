@@ -287,7 +287,7 @@ section { min-height: 100vh; position: relative; padding: 8rem 3rem 4rem; }
 }
 @media (max-width: 960px) {
   .hero-home {
-    flex-direction: column-reverse;
+    flex-direction: column;
     text-align: center;
     gap: 3rem;
   }
@@ -296,6 +296,7 @@ section { min-height: 100vh; position: relative; padding: 8rem 3rem 4rem; }
   .hero-home .hero-name { text-align: center; }
   .hero-home .hero-btns,
   .hero-home-social { justify-content: center; }
+  .hero-role-line { margin-left: auto; margin-right: auto; }
   .hero-photo-frame { width: 260px; height: 260px; }
   .hero-photo-ring { width: 300px; height: 300px; }
 }
