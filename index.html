@@ -14,9 +14,6 @@
   <!-- Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
 
-  <!-- Three.js (CDN) -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-
   <!-- Stylesheet -->
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -42,70 +39,58 @@
   </ul>
 </nav>
 <!-- ═══════════════════════════════════════════════════════
-     HERO
+     HOME
 ════════════════════════════════════════════════════════ -->
-<section id="hero" style="min-height: 100vh; position: relative; display: flex; align-items: center; justify-content: center; background: #070913; overflow: hidden;">
-  
-  <!-- Subtle Grid Background overlay to match the image -->
-  <div style="position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px); background-size: 50px 50px; pointer-events: none; z-index: 1;"></div>
-  
-  <!-- Cyan Top-Left Glow Line -->
-  <div style="position: absolute; top: 0; left: 0; width: 100px; height: 3px; background: #00e5ff; box-shadow: 0 0 20px #00e5ff; z-index: 2;"></div>
+<section id="hero">
+  <div class="hero-grid-bg"></div>
+  <div class="hero-accent-line"></div>
+  <canvas id="particles"></canvas>
 
-  <!-- Custom Keyframes for Name Animation -->
-  <style>
-    @keyframes textFloat {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-8px); }
-    }
-    @keyframes textGlow {
-      0% { filter: drop-shadow(0 0 10px rgba(124,92,252,0.5)); }
-      100% { filter: drop-shadow(0 0 30px rgba(0,229,255,0.8)); }
-    }
-  </style>
-
-  <!-- Interactive Network Background Particles -->
-  <canvas id="particles" style="position: absolute; inset: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.8; pointer-events: none;"></canvas>
-
-  <!-- Main Container exactly like the image split -->
-  <div style="position: relative; z-index: 10; width: 90%; max-width: 1200px; display: flex; justify-content: space-between; align-items: center; margin-top: 4rem;">
-    
-    <!-- Left Text Block -->
-    <div style="max-width: 500px;">
-      <!-- Increased size to 5.5rem and added animation -->
-      <h1 style="font-family: 'Outfit', sans-serif; font-size: 6rem; font-weight: 900; line-height: 1; margin-bottom: 1.5rem; color: #fff; letter-spacing: -0.04em; animation: textFloat 4s ease-in-out infinite;">
-        I am <span style="background: linear-gradient(to right, #7c5cfc, #00e5ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-shadow: 0 0 40px rgba(124,92,252,0.3);">Teja</span>
-      </h1>
-      <h2 id="role-rotator" style="font-family: 'Space Grotesk', sans-serif; font-size: 1.6rem; font-weight: 300; color: #8b92b2; margin-bottom: 2rem; min-height: 2.5rem; letter-spacing: 0.1em; text-transform: uppercase;">
-        <!-- Roles will be injected here -->
-      </h2>
-      <p style="font-family: 'Inter', sans-serif; font-size: 0.95rem; color: #6d7593; line-height: 1.6; margin-bottom: 2.5rem; max-width: 400px;">
-        Passionate about building responsive web applications with modern technologies — one piece at a time.
-      </p>
-
-      <div style="display: flex; gap: 1rem;">
-        <a href="#contact" style="padding: 0.8rem 1.8rem; border-radius: 50px; background: linear-gradient(90deg, #7c5cfc, #00e5ff); color: #fff; text-decoration: none; font-size: 0.9rem; font-weight: 600; border: none; box-shadow: 0 4px 15px rgba(0,229,255,0.3);">
-          Get In Touch
-        </a>
-        <a href="#projects" style="padding: 0.8rem 1.8rem; border-radius: 50px; background: transparent; border: 1px solid #00e5ff; color: #00e5ff; text-decoration: none; font-size: 0.9rem; font-weight: 600;">
-          View Projects
-        </a>
+  <div class="hero-content hero-home">
+    <div class="hero-home-visual">
+      <div class="hero-photo-ring"></div>
+      <div class="hero-photo-frame">
+        <img src="assets/teja.png" alt="K. Teja — Full Stack Engineer">
+        <div class="avatar-glow"></div>
       </div>
     </div>
 
-    <!-- Right 3D Area / Tech Core Container -->
-    <div class="hero-3d-container" style="position: relative; width: 700px; height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center; margin-right: -100px;">
-      <!-- Three.js Canvas specifically constrained here -->
-      <canvas id="three-canvas" style="width: 100%; height: 100%; pointer-events: auto;"></canvas>
+    <div class="hero-home-text">
+      <div class="hero-eyebrow" id="typing-eyebrow">Full Stack Engineer</div>
+
+      <h1 class="hero-name">Hi, I'm <span>Teja</span></h1>
+
+      <p class="hero-home-role">
+        <span id="role-rotator"></span><span class="hero-cursor">|</span>
+      </p>
+      <div class="hero-role-line" aria-hidden="true"></div>
+
+      <p class="hero-home-tagline">
+        I build responsive, modern web applications — turning ideas into clean, polished digital experiences.
+      </p>
+
+      <div class="hero-home-social">
+        <a href="https://github.com/tejakuchallapati" target="_blank" rel="noopener" class="hero-social-btn" aria-label="GitHub">
+          <i data-lucide="github"></i>
+          <span>GitHub</span>
+        </a>
+        <a href="https://www.linkedin.com/in/tejakuchallapati/" target="_blank" rel="noopener" class="hero-social-btn" aria-label="LinkedIn">
+          <i data-lucide="linkedin"></i>
+          <span>LinkedIn</span>
+        </a>
+      </div>
+
+      <div class="hero-btns">
+        <a href="#contact" class="btn-primary">Get In Touch</a>
+        <a href="#projects" class="btn-outline">View Projects</a>
+      </div>
     </div>
   </div>
 
-  <!-- Bottom Chevron -->
-  <div style="position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%); z-index: 10;">
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00e5ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <polyline points="6 9 12 15 18 9"></polyline>
-    </svg>
-  </div>
+  <a href="#about" class="hero-scroll" aria-label="Scroll to about">
+    <div class="mouse-icon"><div class="wheel"></div></div>
+    <span>Scroll</span>
+  </a>
 </section>
 
 <!-- ═══════════════════════════════════════════════════════
@@ -690,7 +675,6 @@
 <!-- ── SCRIPTS (load order matters) ──────────────────────── -->
 <script src="js/cursor.js"></script>
 <script src="js/nav.js"></script>
-<script src="js/three-scene.js"></script>
 <script src="js/particles.js"></script>
 <script src="js/animations.js"></script>
 
