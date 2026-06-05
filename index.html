@@ -25,72 +25,97 @@
 <div id="cursor-ring"></div>
 
 <!-- ── NAV ──────────────────────────────────────────────── -->
-<nav id="navbar" style="position: absolute; top: 2rem; left: 50%; transform: translateX(-50%); width: 90%; max-width: 1200px; padding: 1rem 2rem; display: flex; align-items: center; justify-content: space-between; background: rgba(10, 11, 22, 0.6); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.05); border-radius: 12px; z-index: 100;">
-  <div class="nav-logo" style="display: flex; align-items: center; gap: 0.5rem; font-family: 'Inter', sans-serif; font-size: 1.2rem; font-weight: 800; color: #4A90E2;">
-    <span style="color: #7c5cfc;">■</span> Teja
-  </div>
-  <ul class="nav-links" style="display: flex; gap: 2rem; list-style: none; margin: 0; padding: 0;">
-    <li><a href="#hero" style="color: #fff; font-size: 0.85rem; text-decoration: none; position: relative; padding-bottom: 0.3rem; border-bottom: 2px solid #00e5ff;">Home</a></li>
-    <li><a href="#about" style="color: #8b92b2; font-size: 0.85rem; text-decoration: none; transition: color 0.3s;">About</a></li>
-    <li><a href="#skills" style="color: #8b92b2; font-size: 0.85rem; text-decoration: none; transition: color 0.3s;">Skills</a></li>
-    <li><a href="#projects" style="color: #8b92b2; font-size: 0.85rem; text-decoration: none; transition: color 0.3s;">Projects</a></li>
-    <li><a href="#experience" style="color: #8b92b2; font-size: 0.85rem; text-decoration: none; transition: color 0.3s;">Experience</a></li>
-    <li><a href="#contact" style="color: #8b92b2; font-size: 0.85rem; text-decoration: none; transition: color 0.3s;">Contact</a></li>
+<nav id="navbar" class="hero-nav">
+  <a href="#hero" class="nav-logo">Teja<span>.</span></a>
+  <button class="menu-btn" id="menuBtn" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#hero" class="active">Home</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#certifications">Certifications</a></li>
+    <li><a href="#contact">Contact Me</a></li>
   </ul>
 </nav>
+
 <!-- ═══════════════════════════════════════════════════════
      HOME
 ════════════════════════════════════════════════════════ -->
 <section id="hero">
-  <div class="hero-grid-bg"></div>
-  <div class="hero-accent-line"></div>
-  <canvas id="particles"></canvas>
+  <div class="hero-texture" aria-hidden="true"></div>
+  <div class="hero-spotlight" aria-hidden="true"></div>
 
   <div class="hero-content hero-home">
     <div class="hero-home-visual">
-      <div class="hero-photo-ring"></div>
       <div class="hero-photo-frame">
-        <img src="assets/teja.png" alt="K. Teja — Full Stack Engineer">
-        <div class="avatar-glow"></div>
+        <span class="hero-corner hero-corner-tl" aria-hidden="true"></span>
+        <span class="hero-corner hero-corner-tr" aria-hidden="true"></span>
+        <span class="hero-corner hero-corner-bl" aria-hidden="true"></span>
+        <span class="hero-corner hero-corner-br" aria-hidden="true"></span>
+        <img src="assets/teja.png" alt="K. Teja — Full Stack Developer">
       </div>
     </div>
 
     <div class="hero-home-text">
-      <div class="hero-eyebrow" id="typing-eyebrow">Full Stack Engineer</div>
-
-      <h1 class="hero-name">Hi, I'm <span>Teja</span></h1>
-
-      <p class="hero-home-role">
-        <span id="role-rotator"></span><span class="hero-cursor">|</span>
-      </p>
-      <div class="hero-role-line" aria-hidden="true"></div>
-
-      <p class="hero-home-tagline">
-        I build responsive, modern web applications — turning ideas into clean, polished digital experiences.
-      </p>
-
-      <div class="hero-home-social">
-        <a href="https://github.com/tejakuchallapati" target="_blank" rel="noopener" class="hero-social-btn" aria-label="GitHub">
-          <i data-lucide="github"></i>
-          <span>GitHub</span>
-        </a>
-        <a href="https://www.linkedin.com/in/tejakuchallapati/" target="_blank" rel="noopener" class="hero-social-btn" aria-label="LinkedIn">
-          <i data-lucide="linkedin"></i>
-          <span>LinkedIn</span>
-        </a>
+      <div class="hero-status">
+        <span class="hero-status-dot"></span>
+        Open to opportunities
       </div>
 
-      <div class="hero-btns">
-        <a href="#contact" class="btn-primary">Get In Touch</a>
-        <a href="#projects" class="btn-outline">View Projects</a>
+      <p class="hero-greeting">Hello, I'm</p>
+      <h1 class="hero-display-name">K. <span>Teja</span></h1>
+      <p class="hero-title">Full Stack Developer</p>
+      <div class="hero-role-line" aria-hidden="true"></div>
+
+      <p class="hero-bio">
+        I'm a passionate and dedicated <strong>Full Stack Web Developer</strong> with a strong foundation in frontend and backend technologies. With hands-on experience in modern frameworks, REST APIs, and database-driven applications, I enjoy turning ideas into seamless, user-friendly digital experiences — from learning platforms to full-stack products shipped on GitHub.
+      </p>
+
+      <p class="hero-bio hero-bio-secondary">
+        I care about clean architecture, readable code, and interfaces that feel polished under real-world use. Always eager to learn, collaborate, and deliver solutions that teams can trust and scale.
+      </p>
+
+      <div class="hero-metrics">
+        <div class="hero-metric">
+          <span class="hero-metric-value">3+</span>
+          <span class="hero-metric-label">Live Projects</span>
+        </div>
+        <div class="hero-metric-divider" aria-hidden="true"></div>
+        <div class="hero-metric">
+          <span class="hero-metric-value">Full Stack</span>
+          <span class="hero-metric-label">End-to-end builds</span>
+        </div>
+        <div class="hero-metric-divider" aria-hidden="true"></div>
+        <div class="hero-metric">
+          <span class="hero-metric-value">Clean Code</span>
+          <span class="hero-metric-label">Maintainable &amp; clear</span>
+        </div>
+      </div>
+
+      <div class="hero-tech-pills">
+        <span>React</span>
+        <span>Node.js</span>
+        <span>JavaScript</span>
+        <span>MongoDB</span>
+        <span>REST APIs</span>
+      </div>
+
+      <div class="hero-actions">
+        <a href="assets/teja-resume.pdf" download class="hero-resume-btn">
+          <i data-lucide="download"></i>
+          Download Resume
+        </a>
+        <a href="https://www.linkedin.com/in/tejakuchallapati/" target="_blank" rel="noopener" class="hero-icon-btn" aria-label="LinkedIn">
+          <i data-lucide="linkedin"></i>
+        </a>
+        <a href="https://github.com/tejakuchallapati" target="_blank" rel="noopener" class="hero-icon-btn" aria-label="GitHub">
+          <i data-lucide="github"></i>
+        </a>
+        <a href="#projects" class="hero-projects-link">View my work →</a>
       </div>
     </div>
   </div>
-
-  <a href="#about" class="hero-scroll" aria-label="Scroll to about">
-    <div class="mouse-icon"><div class="wheel"></div></div>
-    <span>Scroll</span>
-  </a>
 </section>
 
 <!-- ═══════════════════════════════════════════════════════
@@ -675,10 +700,7 @@
 <!-- ── SCRIPTS (load order matters) ──────────────────────── -->
 <script src="js/cursor.js"></script>
 <script src="js/nav.js"></script>
-<script src="js/particles.js"></script>
 <script src="js/animations.js"></script>
-
-<script src="js/typewriter.js"></script>
 <script src="js/form.js"></script>
 
 <script>

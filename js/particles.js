@@ -61,7 +61,7 @@
 
       ctx.beginPath();
       ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
-      ctx.fillStyle = 'rgba(124, 92, 252, 0.5)';
+      ctx.fillStyle = 'rgba(99, 102, 241, 0.45)';
       ctx.fill();
 
       // Connections
@@ -76,7 +76,7 @@
           ctx.moveTo(p.x, p.y);
           ctx.lineTo(p2.x, p2.y);
           const opacity = (1 - dist / connectionDistance) * 0.3;
-          ctx.strokeStyle = `rgba(0, 229, 255, ${opacity})`;
+          ctx.strokeStyle = `rgba(45, 212, 191, ${opacity})`;
           ctx.lineWidth = 0.5;
           ctx.stroke();
         }
