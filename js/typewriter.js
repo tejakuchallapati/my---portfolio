@@ -5,9 +5,8 @@
 document.addEventListener('DOMContentLoaded', () => {
     const roles = [
         "Full Stack Developer",
-        "Frontend Developer",
-        "Backend Developer",
-        "UI/UX Enthusiast"
+        "Software Developer",
+        "Aspiring SDE"
     ];
     
     const target = document.getElementById('role-rotator');
