@@ -3,45 +3,61 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>K. Teja · Full Stack Developer</title>
-  <meta name="description" content="Portfolio of K. Teja — Full Stack Developer building modern web applications with React, Node.js, and JavaScript.">
+  <title>Teja Kuchallapati · Full Stack Developer</title>
+  <meta name="description" content="Portfolio of Teja Kuchallapati — Full Stack Developer building modern web applications with React, Node.js, and JavaScript.">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
 
-  <script src="https://unpkg.com/lucide@latest"></script>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<nav id="navbar" class="site-nav">
-  <a href="#hero" class="nav-logo">Teja<span>.</span></a>
-  <button class="menu-btn" id="menuBtn" aria-label="Open menu">
-    <span></span><span></span><span></span>
-  </button>
-  <ul class="nav-links" id="navLinks">
-    <li><a href="#hero" class="active">Home</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#certifications">Certifications</a></li>
-    <li><a href="#contact">Contact Me</a></li>
-  </ul>
-</nav>
+<header class="site-header" id="navbar">
+  <nav class="site-nav" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo" aria-label="Home">
+        <span class="nav-logo-text">KT</span> Portfolio
+      </a>
+
+      <button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+        <span class="menu-line"></span>
+        <span class="menu-line"></span>
+        <span class="menu-line"></span>
+      </button>
+
+      <div class="nav-panel" id="navPanel">
+        <span class="nav-indicator" id="navIndicator" aria-hidden="true"></span>
+        <div class="nav-links-wrapper">
+          <ul class="nav-links" id="navLinks">
+            <li><a href="#hero" class="nav-link active" data-nav="hero">Home</a></li>
+            <li><a href="#skills" class="nav-link" data-nav="skills">Skills</a></li>
+            <li><a href="#projects" class="nav-link" data-nav="projects">Projects</a></li>
+            <li><a href="#certifications" class="nav-link" data-nav="certifications">Certifications</a></li>
+          </ul>
+        </div>
+        <a href="#contact" class="nav-cta" data-nav="contact">Contact Me</a>
+      </div>
+    </div>
+  </nav>
+</header>
 
 <!-- HOME -->
 <section id="hero">
   <div class="container hero-home">
     <div class="hero-home-visual reveal">
       <div class="hero-photo-frame">
-        <img src="assets/teja.png" alt="K. Teja — Full Stack Developer">
+        <img src="assets/teja.png" alt="Teja Kuchallapati — Full Stack Developer">
       </div>
     </div>
 
     <div class="hero-home-text">
       <p class="hero-greeting reveal reveal-d1">Hello, I'm</p>
-      <h1 class="hero-display-name reveal reveal-d2">K. <span>Teja</span></h1>
-      <p class="hero-title reveal reveal-d3">Full Stack Developer</p>
+      <h1 class="hero-display-name reveal reveal-d2">Teja Kuchallapati</h1>
+      <p class="hero-title reveal reveal-d3">
+        <span id="role-rotator"></span><span class="hero-cursor">|</span>
+      </p>
       <div class="hero-role-line reveal reveal-d3"></div>
 
       <p class="hero-bio reveal reveal-d4">
@@ -49,13 +65,7 @@
       </p>
 
       <div class="hero-actions reveal reveal-d5">
-        <a href="assets/teja-resume.pdf" download class="hero-resume-btn">Download Resume</a>
-        <a href="https://www.linkedin.com/in/tejakuchallapati/" target="_blank" rel="noopener" class="hero-icon-btn" aria-label="LinkedIn">
-          <i data-lucide="linkedin"></i>
-        </a>
-        <a href="https://github.com/tejakuchallapati" target="_blank" rel="noopener" class="hero-icon-btn" aria-label="GitHub">
-          <i data-lucide="github"></i>
-        </a>
+        <div id="hero-social-root"></div>
       </div>
     </div>
   </div>
@@ -64,42 +74,75 @@
 <!-- SKILLS -->
 <section id="skills" class="simple-section">
   <div class="container">
-    <h2 class="section-heading reveal">Skills</h2>
+    <div class="section-header reveal">
+      <h2 class="section-heading">Skills</h2>
+      <p class="section-subtitle">Technologies I work with</p>
+    </div>
 
-    <div class="skills-grid">
-      <div class="skill-group reveal reveal-d1">
-        <h3>Programming Languages</h3>
-        <ul>
-          <li>JavaScript</li>
-          <li>HTML</li>
-          <li>CSS</li>
-        </ul>
+    <div class="skills-icons reveal">
+      <div class="skill-icon-item" tabindex="0">
+        <div class="skill-icon-wrap skill-html">&lt;/&gt;</div>
+        <span class="skill-icon-name">HTML</span>
       </div>
-
-      <div class="skill-group reveal reveal-d2">
-        <h3>Databases</h3>
-        <ul>
-          <li>MongoDB</li>
-        </ul>
+      <div class="skill-icon-item" tabindex="0">
+        <div class="skill-icon-wrap skill-css">CSS</div>
+        <span class="skill-icon-name">CSS</span>
       </div>
-
-      <div class="skill-group reveal reveal-d3">
-        <h3>Full Stack Technologies</h3>
-        <ul>
-          <li>React</li>
-          <li>Node.js</li>
-          <li>Express</li>
-          <li>REST APIs</li>
-        </ul>
+      <div class="skill-icon-item" tabindex="0">
+        <div class="skill-icon-wrap skill-js">JS</div>
+        <span class="skill-icon-name">JavaScript</span>
       </div>
-
-      <div class="skill-group reveal reveal-d4">
-        <h3>Tools &amp; Platforms</h3>
-        <ul>
-          <li>Git &amp; GitHub</li>
-          <li>Vite</li>
-          <li>VS Code</li>
-        </ul>
+      <div class="skill-icon-item" tabindex="0">
+        <div class="skill-icon-wrap skill-react">
+          <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="2"/><ellipse cx="12" cy="12" rx="10" ry="4"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(120 12 12)"/></svg>
+        </div>
+        <span class="skill-icon-name">React</span>
+      </div>
+      <div class="skill-icon-item" tabindex="0">
+        <div class="skill-icon-wrap skill-vite">V</div>
+        <span class="skill-icon-name">Vite</span>
+      </div>
+      <div class="skill-icon-item" tabindex="0">
+        <div class="skill-icon-wrap skill-node">N</div>
+        <span class="skill-icon-name">Node.js</span>
+      </div>
+      <div class="skill-icon-item" tabindex="0">
+        <div class="skill-icon-wrap skill-express">Ex</div>
+        <span class="skill-icon-name">Express</span>
+      </div>
+      <div class="skill-icon-item" tabindex="0">
+        <div class="skill-icon-wrap skill-api">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 12h16M12 4v16"/><path d="M7 7l10 10M17 7L7 17"/></svg>
+        </div>
+        <span class="skill-icon-name">REST APIs</span>
+      </div>
+      <div class="skill-icon-item" tabindex="0">
+        <div class="skill-icon-wrap skill-mongo">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2c-1 3-4 6-4 10a4 4 0 008 0c0-4-3-7-4-10z"/></svg>
+        </div>
+        <span class="skill-icon-name">MongoDB</span>
+      </div>
+      <div class="skill-icon-item" tabindex="0">
+        <div class="skill-icon-wrap skill-mysql">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><ellipse cx="12" cy="6" rx="8" ry="3"/><path d="M4 6v6c0 1.7 3.6 3 8 3s8-1.3 8-3V6"/><path d="M4 12v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"/></svg>
+        </div>
+        <span class="skill-icon-name">MySQL</span>
+      </div>
+      <div class="skill-icon-item" tabindex="0">
+        <div class="skill-icon-wrap skill-git">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="6" cy="6" r="2"/><circle cx="6" cy="18" r="2"/><circle cx="18" cy="12" r="2"/><path d="M6 8v8M8 6h5a3 3 0 013 3v3"/></svg>
+        </div>
+        <span class="skill-icon-name">Git &amp; GitHub</span>
+      </div>
+      <div class="skill-icon-item" tabindex="0">
+        <div class="skill-icon-wrap skill-vscode">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 3l7 18 4-9 7-4-18 7z"/></svg>
+        </div>
+        <span class="skill-icon-name">VS Code</span>
+      </div>
+      <div class="skill-icon-item" tabindex="0">
+        <div class="skill-icon-wrap skill-canva">C</div>
+        <span class="skill-icon-name">Canva</span>
       </div>
     </div>
   </div>
@@ -108,30 +151,83 @@
 <!-- PROJECTS -->
 <section id="projects" class="simple-section">
   <div class="container">
-    <h2 class="section-heading reveal">My Projects</h2>
+    <div class="section-header reveal">
+      <h2 class="section-heading">My Projects</h2>
+      <p class="section-subtitle">Work I've built and shipped</p>
+    </div>
 
-    <div class="simple-projects">
-      <article class="simple-project reveal reveal-d1">
-        <h3>Learning Tracker</h3>
-        <p>A full-stack learning progress and productivity tracker for developers. Features goal tracking, progress dashboards, and data persistence across sessions.</p>
-        <div class="simple-project-links">
-          <a href="https://github.com/tejakuchallapati/Learning-Tracker" target="_blank" rel="noopener">GitHub Code</a>
+    <div class="project-sequence">
+      <article class="project-row reveal reveal-d1">
+        <div class="project-preview">
+          <img src="assets/projects/learning-tracker.png" alt="Learning Tracker — dashboard preview">
+        </div>
+        <div class="project-info">
+          <span class="project-num">01</span>
+          <h3>Learning Tracker</h3>
+          <p>A full-stack learning progress and productivity tracker for developers. Features goal tracking, progress dashboards, and data persistence across sessions.</p>
+          <div class="project-skills">
+            <span class="project-skills-label">Built with</span>
+            <ul class="project-skill-tags">
+              <li data-skill="react">React</li>
+              <li data-skill="vite">Vite</li>
+              <li data-skill="tailwind">Tailwind CSS</li>
+              <li data-skill="node">Node.js</li>
+              <li data-skill="express">Express</li>
+              <li data-skill="mongo">MongoDB</li>
+              <li data-skill="api">REST APIs</li>
+            </ul>
+          </div>
+          <div class="simple-project-links">
+            <a href="https://github.com/tejakuchallapati/Learning-Tracker" target="_blank" rel="noopener">GitHub Code</a>
+          </div>
         </div>
       </article>
 
-      <article class="simple-project reveal reveal-d2">
-        <h3>Food App</h3>
-        <p>A web-based food ordering application built with HTML, CSS, and JavaScript. Focused on clean UI, responsive layout, and interactive user flows.</p>
-        <div class="simple-project-links">
-          <a href="https://github.com/tejakuchallapati/food-app" target="_blank" rel="noopener">GitHub Code</a>
+      <article class="project-row project-row-reverse reveal reveal-d2">
+        <div class="project-preview">
+          <img src="assets/projects/food-app.png" alt="Frenzy Food — landing page preview">
+        </div>
+        <div class="project-info">
+          <span class="project-num">02</span>
+          <h3>Frenzy Food</h3>
+          <p>A modern food ordering web app with a clean landing page, menu browsing, and interactive UI — built with HTML, CSS, and JavaScript.</p>
+          <div class="project-skills">
+            <span class="project-skills-label">Built with</span>
+            <ul class="project-skill-tags">
+              <li data-skill="html">HTML</li>
+              <li data-skill="css">CSS</li>
+              <li data-skill="javascript">JavaScript</li>
+              <li data-skill="responsive">Responsive UI</li>
+            </ul>
+          </div>
+          <div class="simple-project-links">
+            <a href="https://github.com/tejakuchallapati/food-app" target="_blank" rel="noopener">GitHub Code</a>
+          </div>
         </div>
       </article>
 
-      <article class="simple-project reveal reveal-d3">
-        <h3>Developer Portfolio</h3>
-        <p>A personal portfolio website showcasing my projects, skills, and contact information — built with a clean layout and smooth scroll animations.</p>
-        <div class="simple-project-links">
-          <a href="https://github.com/tejakuchallapati/my---portfolio" target="_blank" rel="noopener">GitHub Code</a>
+      <article class="project-row reveal reveal-d3">
+        <div class="project-preview">
+          <img src="assets/projects/portfolio.png" alt="Developer Portfolio — website preview">
+        </div>
+        <div class="project-info">
+          <span class="project-num">03</span>
+          <h3>Developer Portfolio</h3>
+          <p>A personal portfolio website showcasing my projects, skills, and contact information — built with a clean layout and smooth scroll animations.</p>
+          <div class="project-skills">
+            <span class="project-skills-label">Built with</span>
+            <ul class="project-skill-tags">
+              <li data-skill="html">HTML</li>
+              <li data-skill="css">CSS</li>
+              <li data-skill="javascript">JavaScript</li>
+              <li data-skill="react">React</li>
+              <li data-skill="vite">Vite</li>
+              <li data-skill="tailwind">Tailwind CSS</li>
+            </ul>
+          </div>
+          <div class="simple-project-links">
+            <a href="https://github.com/tejakuchallapati/my---portfolio" target="_blank" rel="noopener">GitHub Code</a>
+          </div>
         </div>
       </article>
     </div>
@@ -141,7 +237,10 @@
 <!-- CERTIFICATIONS -->
 <section id="certifications" class="simple-section">
   <div class="container">
-    <h2 class="section-heading reveal">My Certifications</h2>
+    <div class="section-header reveal">
+      <h2 class="section-heading">My Certifications</h2>
+      <p class="section-subtitle">Credentials &amp; learning paths</p>
+    </div>
 
     <div class="simple-certs">
       <div class="simple-cert reveal reveal-d1">
@@ -164,7 +263,10 @@
 <!-- CONTACT -->
 <section id="contact" class="simple-section">
   <div class="container contact-wrap">
-    <h2 class="section-heading reveal">Get in Touch</h2>
+    <div class="section-header reveal">
+      <h2 class="section-heading">Get in Touch</h2>
+      <p class="section-subtitle">Let's connect and build something together</p>
+    </div>
 
     <form class="simple-form reveal reveal-d2" id="contactForm" onsubmit="handleFormSubmit(event)">
       <div class="form-group">
@@ -195,10 +297,12 @@
   <p>© 2026 <span>Teja</span>. All rights reserved.</p>
 </footer>
 
+<script type="module" src="/src/main.tsx"></script>
 <script src="js/nav.js"></script>
 <script src="js/animations.js"></script>
+<script src="js/typewriter.js"></script>
 <script src="js/form.js"></script>
-<script>lucide.createIcons();</script>
+<script src="js/project-skills.js"></script>
 
 </body>
 </html>
