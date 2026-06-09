@@ -1,6 +1,7 @@
 {
   "name": "teja-portfolio",
   "version": "1.0.0",
+  "private": true,
   "description": "Premium Developer Portfolio",
   "type": "module",
   "scripts": {

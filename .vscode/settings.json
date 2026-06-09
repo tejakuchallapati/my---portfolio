@@ -1,0 +1,5 @@
+{
+  "npm.packageManager": "npm",
+  "npm.enableRunFromFolder": true,
+  "npm.scriptExplorerAction": "run"
+}
