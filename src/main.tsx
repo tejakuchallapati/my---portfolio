@@ -3,6 +3,7 @@ import { createRoot } from "react-dom/client";
 
 import SocialIcons from "@/components/ui/social-icon";
 
+import "../css/style.css";
 import "./index.css";
 
 const root = document.getElementById("hero-social-root");
