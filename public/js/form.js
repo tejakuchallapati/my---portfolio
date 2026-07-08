@@ -36,7 +36,7 @@ function handleFormSubmit(e) {
 
   const btn = document.getElementById('submitBtn');
   btn.classList.add('sending');
-  btn.textContent = 'Sending…';
+  btn.querySelector('span').textContent = 'Sending…';
 
   // Simulate async send (replace with real fetch/EmailJS call)
   setTimeout(() => {

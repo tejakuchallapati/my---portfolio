@@ -9,7 +9,7 @@ export interface SocialIconLinks {
 }
 
 const baseIconClass =
-  "rounded-lg h-12 w-12 transition-all duration-300 cursor-pointer hover:scale-[1.12] bg-background/60";
+  "rounded-xl h-12 w-12 transition-all duration-300 cursor-pointer hover:scale-[1.12] bg-background/60";
 
 const socialStyles = {
   github:
@@ -22,8 +22,8 @@ const socialStyles = {
 
 export function SocialIcons({
   github = "https://github.com/tejakuchallapati",
-  linkedin = "https://www.linkedin.com/in/tejakuchallapati/",
-  email = "mailto:teja@developer.dev",
+  linkedin = "https://www.linkedin.com/in/teja-kuchallapati-806a29374/",
+  email = "mailto:teja26kt@gmail.com",
 }: SocialIconLinks) {
   return (
     <div className="flex items-center justify-start gap-4 flex-wrap">

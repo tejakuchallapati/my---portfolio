@@ -36,6 +36,10 @@ document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') setMenuOpen(false);
 });
 
+function getNavKey(target) {
+  return target?.dataset?.nav || 'contact';
+}
+
 function moveIndicator(target) {
   if (!navIndicator || !navPanel || !target || window.innerWidth <= 900) {
     if (navIndicator) navIndicator.style.opacity = window.innerWidth <= 900 ? '0' : '';
@@ -44,7 +48,9 @@ function moveIndicator(target) {
 
   const panelRect = navPanel.getBoundingClientRect();
   const targetRect = target.getBoundingClientRect();
+  const navKey = getNavKey(target);
 
+  navIndicator.dataset.target = navKey;
   navIndicator.style.opacity = '1';
   navIndicator.style.width = `${targetRect.width}px`;
   navIndicator.style.height = `${targetRect.height}px`;
