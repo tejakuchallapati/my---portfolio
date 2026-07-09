@@ -1,7 +1,7 @@
-# Alex Mercer — Premium Developer Portfolio
+# Teja Kuchallapati — Developer Portfolio
 
-A futuristic, fully animated developer portfolio built with vanilla HTML, CSS, and JavaScript + Three.js.  
-No build step. No frameworks. Just open `index.html` in a browser.
+A modern, fully animated developer portfolio built with vanilla HTML, CSS, and JavaScript.  
+No heavy frameworks. Just clean, fast code.
 
 ---
 
@@ -12,20 +12,17 @@ portfolio/
 ├── index.html              ← Main entry point
 ├── css/
 │   └── style.css           ← All styles (variables, layout, components, responsive)
-├── js/
-│   ├── cursor.js           ← Custom dual-layer animated cursor
+├── js/ (served via /public/js/)
 │   ├── nav.js              ← Mobile menu + active section highlight
-│   ├── hero-bg.js          ← Canvas 2D tech background (hex grid, circuit traces,
-│   │                          matrix rain, scanline sweep, ambient orbs)
-│   ├── three-scene.js      ← Three.js 3D scene (DNA helix, orbiting icosahedra,
-│   │                          floating octahedra, glowing ring halos)
-│   ├── particles.js        ← Floating particle network overlay
-│   ├── animations.js       ← Scroll reveal, skill bars, card tilt, project filter,
-│   │                          smooth scroll
-│   └── form.js             ← Contact form validation & submission handler
+│   ├── animations.js       ← Scroll reveal, smooth scroll
+│   ├── typewriter.js       ← Role rotator / typewriter effect
+│   ├── form.js             ← Contact form validation & submission handler
+│   ├── project-skills.js   ← Project skill tag colour mapping
+│   └── cert-lightbox.js    ← Certificate lightbox viewer
 └── assets/
-    ├── avatar.jpg          ← (Add your photo here)
-    └── alex-mercer-resume.pdf  ← (Add your PDF resume here)
+    ├── teja.png            ← Profile photo
+    ├── projects/           ← Project preview screenshots
+    └── certificates/       ← Certification images
 ```
 
 ---
@@ -33,7 +30,7 @@ portfolio/
 ## 🚀 Getting Started
 
 ### Option A — Open directly
-Just double-click `index.html`. Everything works without a server except for the resume download link (browser security blocks local file downloads).
+Just double-click `index.html`. Everything works without a server.
 
 ### Option B — Local server (recommended)
 ```bash
@@ -48,52 +45,6 @@ Install "Live Server" extension → right-click index.html → Open with Live Se
 ```
 
 Then visit `http://localhost:3000`
-
----
-
-## ✏️ Personalisation Checklist
-
-### 1. Your name & role
-In `index.html` find and replace:
-- `Alex Mercer` → your name
-- `alex@mercer.dev` → your email
-- `@alexmercer` → your GitHub handle
-- `@alexm_dev` → your Twitter/X handle
-
-### 2. Your photo
-Replace the emoji avatar block:
-```html
-<!-- BEFORE -->
-<div class="avatar-placeholder">🧑‍💻</div>
-
-<!-- AFTER -->
-<img src="assets/avatar.jpg" alt="Your Name" style="width:100%;height:100%;object-fit:cover;">
-```
-
-### 3. Resume download
-1. Drop your PDF into `assets/`
-2. Update the href in the Resume section:
-```html
-<a href="assets/YOUR-RESUME.pdf" download class="dl-resume-btn ...">
-```
-
-### 4. Projects
-Each project card is a `<div class="project-card" data-cat="fullstack|frontend|ai|backend">`.  
-Update the name, description, tags, and `href` links to GitHub/live URLs.
-
-### 5. Social links
-Update the `href` attributes in the Contact section and in the Resume sidebar.
-
-### 6. Colour theme
-All colours live in CSS custom properties at the top of `css/style.css`:
-```css
-:root {
-  --c-cyan:   #00e5ff;   /* primary accent */
-  --c-purple: #7c5cfc;   /* secondary accent */
-  --c-violet: #a78bfa;   /* muted purple */
-  --c-pink:   #f472b6;   /* highlight */
-}
-```
 
 ---
 
@@ -117,11 +68,11 @@ Push to a repo → Settings → Pages → Source: main branch → root folder
 
 | Layer | Technology |
 |---|---|
-| 3D Hero | Three.js r128 (CDN) |
-| 2D Background | Canvas 2D API |
-| Animations | CSS transitions + IntersectionObserver |
-| Typography | Syne · Instrument Sans · DM Mono (Google Fonts) |
-| Hosting | Any static host |
+| Structure | HTML5 Semantic Markup |
+| Styling | Vanilla CSS (custom properties, animations) |
+| Scripting | Vanilla JavaScript (ES6+) |
+| Typography | Inter · Outfit · JetBrains Mono (Google Fonts) |
+| Hosting | Vercel |
 
 ---
 
@@ -136,5 +87,5 @@ To send real emails, replace the `setTimeout` in `js/form.js` with one of:
 
 ---
 
-Made with ♥ and too much Three.js.
+Made with ♥ by Teja Kuchallapati.
 # my---portfolio
