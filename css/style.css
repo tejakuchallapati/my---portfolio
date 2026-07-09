@@ -2237,7 +2237,43 @@ footer span { color: var(--text); }
 }
 
 
+/* ── SCROLL TO TOP ─────────────────────────────────────── */
+.scroll-top-btn {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(139, 92, 246, 0.15);
+  border: 1px solid rgba(139, 92, 246, 0.35);
+  border-radius: 50%;
+  color: #c4b5fd;
+  cursor: pointer;
+  z-index: 100;
+  opacity: 0;
+  transform: translateY(12px);
+  pointer-events: none;
+  transition: opacity 0.3s var(--ease), transform 0.3s var(--ease), background 0.2s, box-shadow 0.2s;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.scroll-top-btn.visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.scroll-top-btn:hover {
+  background: rgba(139, 92, 246, 0.28);
+  box-shadow: 0 0 20px rgba(139, 92, 246, 0.25);
+}
+
 /* ── SCROLL REVEAL ─────────────────────────────────────── */
+
 .reveal {
   opacity: 0;
   transform: translateY(28px);
