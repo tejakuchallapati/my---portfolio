@@ -12,6 +12,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const target = document.getElementById('role-rotator');
     if (!target) return;
 
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        target.textContent = roles[0];
+        return;
+    }
+
     let roleIndex = 0;
     let charIndex = 0;
     let isDeleting = false;
