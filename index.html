@@ -543,44 +543,33 @@
 
       <div class="cert-gallery">
         <article class="cert-card reveal reveal-d1">
-          <div class="cert-preview">
+          <button type="button" class="cert-preview" data-cert-src="assets/certificates/html5-infosys.png"
+            data-cert-title="HTML5 — The Language" aria-label="View HTML5 certificate">
             <img src="assets/certificates/html5-infosys.png"
               alt="Infosys Springboard HTML5 course completion certificate for Teja Kuchallapati">
-          </div>
+          </button>
           <div class="cert-details">
             <span class="cert-issuer">Infosys Springboard</span>
             <h3>HTML5 — The Language</h3>
             <p class="cert-date">Completed June 6, 2026</p>
-            <a href="https://verify.onwingspan.com" class="cert-verify-link" target="_blank" rel="noopener noreferrer">
-              Verify Certificate
-              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" aria-hidden="true">
-                <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
-                <path d="M15 3h6v6" />
-                <path d="M10 14L21 3" />
-              </svg>
-            </a>
+            <a href="assets/certificates/html5-infosys.png" class="cert-view-btn"
+              data-cert-src="assets/certificates/html5-infosys.png"
+              data-cert-title="HTML5 — The Language">View Certificate</a>
           </div>
         </article>
 
         <article class="cert-card reveal reveal-d2">
-          <div class="cert-preview">
+          <button type="button" class="cert-preview" data-cert-src="assets/certificates/css3-infosys.png"
+            data-cert-title="CSS3" aria-label="View CSS3 certificate">
             <img src="assets/certificates/css3-infosys.png"
               alt="Infosys Springboard CSS3 course completion certificate for Teja Kuchallapati">
-          </div>
+          </button>
           <div class="cert-details">
             <span class="cert-issuer">Infosys Springboard</span>
             <h3>CSS3</h3>
             <p class="cert-date">Completed June 12, 2026</p>
-            <a href="https://verify.onwingspan.com" class="cert-verify-link" target="_blank" rel="noopener noreferrer">
-              Verify Certificate
-              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" aria-hidden="true">
-                <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
-                <path d="M15 3h6v6" />
-                <path d="M10 14L21 3" />
-              </svg>
-            </a>
+            <a href="assets/certificates/css3-infosys.png" class="cert-view-btn"
+              data-cert-src="assets/certificates/css3-infosys.png" data-cert-title="CSS3">View Certificate</a>
           </div>
         </article>
         <article class="cert-card reveal reveal-d3">
@@ -674,24 +663,26 @@
             <p class="contact-form-subtitle">Fill out the form and I&apos;ll get back to you.</p>
           </div>
 
-          <form class="simple-form" id="contactForm" onsubmit="handleFormSubmit(event)">
+          <form class="simple-form" id="contactForm" novalidate>
             <div class="form-row">
               <div class="form-group">
                 <label for="fname">Name</label>
-                <input type="text" id="fname" name="name" placeholder="Your name" autocomplete="name">
-                <span class="form-error" id="fnameError">Please enter your name</span>
+                <input type="text" id="fname" name="name" placeholder="Your name" autocomplete="name" required
+                  aria-describedby="fnameError" aria-invalid="false">
+                <span class="form-error" id="fnameError" role="alert">Please enter your name</span>
               </div>
               <div class="form-group">
                 <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="you@email.com" autocomplete="email">
-                <span class="form-error" id="emailError">Please enter a valid email</span>
+                <input type="email" id="email" name="email" placeholder="you@email.com" autocomplete="email" required
+                  aria-describedby="emailError" aria-invalid="false">
+                <span class="form-error" id="emailError" role="alert">Please enter a valid email</span>
               </div>
             </div>
             <div class="form-group">
               <label for="message">Message</label>
-              <textarea id="message" name="message" placeholder="Tell me about your project or opportunity…"
-                rows="5"></textarea>
-              <span class="form-error" id="messageError">Please enter a message</span>
+              <textarea id="message" name="message" placeholder="Tell me about your project or opportunity…" rows="5"
+                required aria-describedby="messageError" aria-invalid="false"></textarea>
+              <span class="form-error" id="messageError" role="alert">Please enter a message</span>
             </div>
             <button type="submit" class="form-submit" id="submitBtn">
               <span>Send Message</span>
@@ -701,7 +692,7 @@
                 <path d="M13 6l6 6-6 6" />
               </svg>
             </button>
-            <div class="form-success" id="formSuccess">
+            <div class="form-success" id="formSuccess" role="status" aria-live="polite" tabindex="-1">
               <h3>Message Sent!</h3>
               <p>Thanks for reaching out. I&apos;ll get back to you soon.</p>
             </div>
