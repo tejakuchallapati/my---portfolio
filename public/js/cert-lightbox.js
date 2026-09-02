@@ -11,9 +11,12 @@ function initCertLightbox() {
 
   if (!certLightbox || !certLightboxImg) return;
 
-  function openCertLightbox(src, title) {
+  let lastTrigger = null;
+
+  function openCertLightbox(src, title, trigger) {
     if (!src) return;
 
+    lastTrigger = trigger || null;
     certLightboxTitle.textContent = title || 'Certificate';
     certLightboxImg.alt = title || 'Certificate';
     certLightboxImg.src = src;
@@ -31,6 +34,8 @@ function initCertLightbox() {
     certLightbox.setAttribute('aria-hidden', 'true');
     certLightboxImg.removeAttribute('src');
     document.body.style.overflow = '';
+    lastTrigger?.focus?.();
+    lastTrigger = null;
   }
 
   document.addEventListener('click', (e) => {
@@ -47,7 +52,7 @@ function initCertLightbox() {
 
     const title = trigger.getAttribute('data-cert-title') || 'Certificate';
 
-    if (src) openCertLightbox(src, title);
+    if (src) openCertLightbox(src, title, trigger);
   });
 
   certLightboxClose?.addEventListener('click', closeCertLightbox);
