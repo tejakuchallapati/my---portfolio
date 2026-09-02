@@ -45,7 +45,7 @@ EOF
 )"
 
 # 2) Hero role text
-git add js/typewriter.js
+git add public/js/typewriter.js
 
 commit_if_staged "$(cat <<'EOF'
 feat: update hero role rotator titles.
@@ -55,7 +55,7 @@ EOF
 )"
 
 # 3) Navbar behavior
-git add js/nav.js
+git add public/js/nav.js
 
 commit_if_staged "$(cat <<'EOF'
 feat: add sliding navbar indicator and improved mobile menu.
@@ -78,7 +78,7 @@ EOF
 )"
 
 # 5) Project skill icons script
-git add js/project-skills.js
+git add public/js/project-skills.js
 
 commit_if_staged "$(cat <<'EOF'
 feat: add tech icons for project skill tags.

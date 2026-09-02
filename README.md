@@ -1,91 +1,86 @@
-# Teja Kuchallapati — Developer Portfolio
+# Teja Kuchallapati Portfolio
 
-A modern, fully animated developer portfolio built with vanilla HTML, CSS, and JavaScript.  
-No heavy frameworks. Just clean, fast code.
+Personal portfolio for **Teja Kuchallapati** — Full Stack Developer.  
+Built with Vite, a React island for hero social icons, Tailwind/shadcn UI pieces, and vanilla HTML/CSS/JS sections.
+
+**Live:** [https://tejakuchallapatiportfolio.vercel.app](https://tejakuchallapatiportfolio.vercel.app)
 
 ---
 
-## 📁 Folder Structure
+## Folder Structure
 
 ```
 portfolio/
-├── index.html              ← Main entry point
-├── css/
-│   └── style.css           ← All styles (variables, layout, components, responsive)
-├── js/ (served via /public/js/)
-│   ├── nav.js              ← Mobile menu + active section highlight
-│   ├── animations.js       ← Scroll reveal, smooth scroll
-│   ├── typewriter.js       ← Role rotator / typewriter effect
-│   ├── form.js             ← Contact form validation & submission handler
-│   ├── project-skills.js   ← Project skill tag colour mapping
-│   └── cert-lightbox.js    ← Certificate lightbox viewer
-└── assets/
-    ├── teja.png            ← Profile photo
-    ├── projects/           ← Project preview screenshots
-    └── certificates/       ← Certification images
+├── index.html              ← Main page markup
+├── css/style.css           ← Site styles
+├── src/main.tsx            ← React entry (imports CSS + social icons)
+├── components/ui/          ← shadcn-style UI components
+├── public/js/              ← Vanilla JS (copied to dist/js)
+│   ├── nav.js
+│   ├── animations.js
+│   ├── typewriter.js
+│   ├── form.js
+│   ├── project-skills.js
+│   └── cert-lightbox.js
+├── public/og.png           ← Stable social preview image
+├── public/favicon.jpg      ← Favicon
+├── assets/                 ← Photos, project & certificate images
+└── vercel.json             ← Vercel Vite build config
 ```
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
-### Option A — Open directly
-Just double-click `index.html`. Everything works without a server.
-
-### Option B — Local server (recommended)
 ```bash
-# Python
-python3 -m http.server 3000
-
-# Node
-npx serve .
-
-# VS Code
-Install "Live Server" extension → right-click index.html → Open with Live Server
+npm install
+npm run dev
 ```
 
-Then visit `http://localhost:3000`
+Open `http://localhost:5173`
+
+```bash
+npm run build    # production build → dist/
+npm run preview  # preview the production build
+```
+
+> Opening `index.html` directly will not load styles correctly — CSS is imported through Vite/`src/main.tsx`.
 
 ---
 
-## 🌐 Deployment
+## Deployment
 
-### Vercel (recommended — free)
+Connected to Vercel from the `main` branch. Push to `main` to redeploy.
+
+Or manually:
+
 ```bash
 npm i -g vercel
 vercel
 ```
 
-### Netlify
-Drag the entire `portfolio/` folder onto [netlify.com/drop](https://app.netlify.com/drop)
-
-### GitHub Pages
-Push to a repo → Settings → Pages → Source: main branch → root folder
-
 ---
 
-## 🛠 Tech Used
+## Tech Used
 
 | Layer | Technology |
 |---|---|
-| Structure | HTML5 Semantic Markup |
-| Styling | Vanilla CSS (custom properties, animations) |
-| Scripting | Vanilla JavaScript (ES6+) |
-| Typography | Inter · Outfit · JetBrains Mono (Google Fonts) |
+| Build | Vite |
+| UI island | React + Tailwind + shadcn-style components |
+| Structure | HTML5 |
+| Styling | CSS custom properties + Tailwind utilities |
+| Scripting | Vanilla JS (nav, form, lightbox, animations) |
 | Hosting | Vercel |
 
 ---
 
-## 📝 Connecting the Contact Form
+## Contact Form
 
-The form currently shows a success message after 1.5 s (simulated).  
-To send real emails, replace the `setTimeout` in `js/form.js` with one of:
+The form posts through [FormSubmit](https://formsubmit.co) to `teja26kt@gmail.com`.  
+On first submit, FormSubmit may ask you to confirm the email address in your inbox.
 
-- **[EmailJS](https://emailjs.com)** — free tier, no backend needed
-- **[Formspree](https://formspree.io)** — point the form action at your endpoint
-- **Custom API** — `fetch('/api/contact', { method:'POST', body: formData })`
+Alternatives: EmailJS or a custom `/api/contact` endpoint.
 
 ---
 
 Made with ♥ by Teja Kuchallapati.
-# my---portfolio

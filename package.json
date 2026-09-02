@@ -2,7 +2,7 @@
   "name": "teja-portfolio",
   "version": "1.0.0",
   "private": true,
-  "description": "Premium Developer Portfolio",
+  "description": "Teja Kuchallapati Portfolio — Full Stack Developer",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -10,7 +10,7 @@
     "preview": "vite preview"
   },
   "keywords": [],
-  "author": "Teja",
+  "author": "Teja Kuchallapati",
   "license": "MIT",
   "dependencies": {
     "@radix-ui/react-slot": "^1.2.3",
